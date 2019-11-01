@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from './components/Button';
+import Row from './components/Row';
+import Col from './components/Col';
 
 function App() {
   return (
@@ -7,14 +10,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Row>
+          <Col c={6} float>
+            <Button title={"Learn React"} color={"#ff0"} bg={"#000000"} fontSize={10} changeStep={() => console.log("CLICOU!")} />
+          </Col>
+        </Row>
+
       </header>
     </div>
   );
