@@ -14,6 +14,7 @@ const HD = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: ${colors.primaryDark};
+  position: fixed;
 
   @media (max-width: 767px) {
     justify-content: space-between;
@@ -39,6 +40,7 @@ const HD = styled.div`
 const Logo = styled.img`
   height: 80%;
   width: auto;
+  z-index: 1;
 
   @media (max-width: 767px) {
     margin-left: 10%;
@@ -95,6 +97,7 @@ const MenuMobileButton = styled.button`
   margin-right: 10%;
   background-color: transparent;
   border: 0;
+  z-index: 1;
 
   @media (min-width: 768px) {
     display: none;
@@ -107,9 +110,30 @@ const MenuMobile = styled.div`
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 80px;
   align-items: center;
   background-color: ${colors.primaryDark};
+  z-index: 0;
+
+  -webkit-animation: openMenu 1s;
+  animation: openMenu 1s;
+
+  @-webkit-keyframes openMenu {
+    from {
+      top: -210px;
+    }
+    to {
+      top: 80px;
+    }
+  }
+  @keyframes openMenu {
+    from {
+      top: -210px;
+    }
+    to {
+      top: 80px;
+    }
+  }
+  top: 80px;
 
   @media (min-width: 768px) {
     display: none;
@@ -164,7 +188,6 @@ const MobileMenu = ({ submenus }) => {
 
 export const Header = ({ logo, submenus }) => (
   <HD>
-    {console.log("submenus", submenus)}
     <Logo src={logo} />
     <Menu>
       {submenus.map(({ text, url }) => (
