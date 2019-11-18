@@ -14,16 +14,22 @@ const HD = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: ${colors.primaryDark};
+<<<<<<< HEAD
   position: fixed;
+=======
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
 
   @media (max-width: 767px) {
     justify-content: space-between;
   }
 
+<<<<<<< HEAD
   @media (min-width: 991px) {
     height: 100px;
   }
 
+=======
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
   @media (min-width: 1200px) {
     height: 120px;
   }
@@ -40,7 +46,10 @@ const HD = styled.div`
 const Logo = styled.img`
   height: 80%;
   width: auto;
+<<<<<<< HEAD
   z-index: 1;
+=======
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
 
   @media (max-width: 767px) {
     margin-left: 10%;
@@ -70,10 +79,13 @@ const MenuItem = styled.a`
     color: ${colors.secundary50};
   }
 
+<<<<<<< HEAD
   @media (min-width: 991px) {
     font-size: 25px;
   }
 
+=======
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
   @media (min-width: 1200px) {
     font-size: 28px;
   }
@@ -97,7 +109,10 @@ const MenuMobileButton = styled.button`
   margin-right: 10%;
   background-color: transparent;
   border: 0;
+<<<<<<< HEAD
   z-index: 1;
+=======
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
 
   @media (min-width: 768px) {
     display: none;
@@ -110,6 +125,7 @@ const MenuMobile = styled.div`
   flex-direction: column;
   width: 100%;
   position: absolute;
+<<<<<<< HEAD
   align-items: center;
   background-color: ${colors.primaryDark};
   z-index: 0;
@@ -134,6 +150,11 @@ const MenuMobile = styled.div`
     }
   }
   top: 80px;
+=======
+  top: 80px;
+  align-items: center;
+  background-color: ${colors.primaryDark};
+>>>>>>> 7c782250865c05a084201e48e9fbdc3bde839253
 
   @media (min-width: 768px) {
     display: none;
