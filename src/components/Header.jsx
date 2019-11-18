@@ -19,7 +19,6 @@ const HD = styled.div`
   @media (max-width: 767px) {
     justify-content: space-between;
   }
-
   @media (min-width: 991px) {
     height: 100px;
   }
@@ -69,7 +68,6 @@ const MenuItem = styled.a`
     text-decoration: underline;
     color: ${colors.secundary50};
   }
-
   @media (min-width: 991px) {
     font-size: 25px;
   }
