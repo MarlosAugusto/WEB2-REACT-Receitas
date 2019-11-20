@@ -158,7 +158,6 @@ const MenuItemMobile = styled.a`
   }
 `;
 
-// `;
 const MobileMenu = ({ submenus }) => {
   const [isOpen, setIsOpen] = useState(false);
 
