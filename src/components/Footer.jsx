@@ -13,8 +13,6 @@ const TF = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: ${colors.primaryDark};
-
-  margin-top: 200px;
 `;
 
 const Items = styled.div`
@@ -23,6 +21,8 @@ const Items = styled.div`
   justify-content: space-between;
   font-family: "Malvinas Regular Regular";
   display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: 991px) {
     display: inline-flex;
