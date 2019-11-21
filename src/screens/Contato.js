@@ -4,9 +4,6 @@ import { ContactCard, Title } from "../components/ContactCard"
 import marlos from "../assets/images/marlos.jpg"
 // import ian from "../assets/images/ian.jpg"
 
-import styled from "styled-components";
-
-
 export function Contato() {
   return (
     <>
