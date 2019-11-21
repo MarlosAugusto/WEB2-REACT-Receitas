@@ -74,16 +74,16 @@ export function NovaReceita() {
           </FormItemRow>
           <FormItemRow mt={5}>
             <FormItemCol wd={3}>
+              <Label>Adicionar imagem</Label>
+              <Input type="file" accept="image/*" id="file" />
+            </FormItemCol>
+            <FormItemCol wd={3}>
               <Label>Ingrediente</Label>
               <Input value={ingredient} onChange={e => setIngredient(e.target.value)} />
             </FormItemCol>
             <FormItemCol wd={3}>
               <Label>{''}</Label>
               <Button bg={colors.secundary} color={colors.primary} title="Adicionar o ingrediente" clicked={(e) => handleAddIngredient(e)} />
-            </FormItemCol>
-            <FormItemCol wd={3}>
-              <Label>Adicionar imagem</Label>
-              <Input type="file" accept="image/*" id="file" />
             </FormItemCol>
           </FormItemRow>
           <FormItemRow mt={5}>
