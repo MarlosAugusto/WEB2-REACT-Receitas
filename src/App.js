@@ -9,6 +9,7 @@ import { Home } from "./screens/Home";
 import { ReceitasDoces } from "./screens/ReceitasDoces";
 import { ReceitasSalgadas } from "./screens/ReceitasSalgadas";
 import { NovaReceita } from "./screens/NovaReceita";
+import { Receita } from "./screens/Receita";
 import { Contato } from "./screens/Contato";
 
 import { routes } from "./defs/routes"
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/receitas-doces" component={ReceitasDoces} />
         <Route path="/receitas-salgadas" component={ReceitasSalgadas} />
         <Route path="/nova-receita" component={NovaReceita} />
+        <Route path="/receita/:type/:id" component={Receita} />
         <Route path="/contato" component={Contato} />
       </Container>
       <Footer />
