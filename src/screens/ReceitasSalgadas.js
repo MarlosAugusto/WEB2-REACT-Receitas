@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
+import { useHistory } from "react-router-dom";
+
 import { List, FormItemRow, FormItemCol, Title, Image, Subtitle, Detail, ImageNotFound, ImageContainer, RecipeButton } from "../components/Recipe"
 
 import { GET, GETFILE } from '../services/FB'
 import _ from "lodash";
 
 export function ReceitasSalgadas() {
+  const history = useHistory();
+
   const [recipes, setRecipes] = useState([]);
   const [images, setImages] = useState([]);
   const [aux, setAux] = useState(false);
@@ -40,18 +44,18 @@ export function ReceitasSalgadas() {
     <>
       <div className="child">
         {
-          recipes.map(({ title, ingredients, preparation }, index) =>
+          recipes.map(({ title, ingredients, preparation, uid }, index) =>
             <List key={title}>
               <FormItemRow>
                 <FormItemCol>
-                  <RecipeButton onClick={() => console.log('goToRecipe', title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Salgada/${uid}`)}>
                     <Title>{title}</Title>
                   </RecipeButton>
                 </FormItemCol>
               </FormItemRow>
               <FormItemRow>
                 <FormItemCol wd={3} top>
-                  <RecipeButton onClick={() => console.log('goToRecipe', title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Salgada/${uid}`)}>
                     <ImageContainer>
                       <Image src={images[index]} />
                       {!images[index] && <ImageNotFound>Imagem não encontrada</ImageNotFound>}

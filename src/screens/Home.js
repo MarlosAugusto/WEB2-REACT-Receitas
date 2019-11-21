@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from "styled-components";
 
+import { useHistory } from "react-router-dom";
+
 import colors from "../defs/colors";
 
 import { GET, GETFILE } from '../services/FB'
@@ -30,6 +32,8 @@ const Type = styled.p`
 `;
 
 export function Home() {
+  const history = useHistory();
+
   const [recipeDoce, setRecipeDoce] = useState(null);
   const [recipeSalgada, setRecipeSalgada] = useState(null);
   const [imageDoce, setImageDoce] = useState('');
@@ -87,14 +91,14 @@ export function Home() {
             <List key={recipeDoce.title}>
               <FormItemRow>
                 <FormItemCol>
-                  <RecipeButton onClick={() => console.log('goToRecipe', recipeDoce.title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Doce/${recipeDoce.uid}`)}>
                     <Title>{recipeDoce.title}</Title>
                   </RecipeButton>
                 </FormItemCol>
               </FormItemRow>
               <FormItemRow>
                 <FormItemCol wd={3} top>
-                  <RecipeButton onClick={() => console.log('goToRecipe', recipeDoce.title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Doce/${recipeDoce.uid}`)}>
                     <ImageContainer>
                       <Image src={imageDoce ? imageDoce : null} />
                       {!imageDoce && <ImageNotFound>Imagem não encontrada</ImageNotFound>}
@@ -122,14 +126,14 @@ export function Home() {
             <List key={recipeSalgada.title}>
               <FormItemRow>
                 <FormItemCol>
-                  <RecipeButton onClick={() => console.log('goToRecipe', recipeSalgada.title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Salgada/${recipeSalgada.uid}`)}>
                     <Title>{recipeSalgada.title}</Title>
                   </RecipeButton>
                 </FormItemCol>
               </FormItemRow>
               <FormItemRow>
                 <FormItemCol wd={3} top>
-                  <RecipeButton onClick={() => console.log('goToRecipe', recipeSalgada.title.toLowerCase().replace(' ', '-'))}>
+                  <RecipeButton onClick={() => history.push(`/receita/Receita-Salgada/${recipeSalgada.uid}`)}>
                     <ImageContainer>
                       <Image src={imageSalgada ? imageSalgada : null} />
                       {!imageSalgada && <ImageNotFound>Imagem não encontrada</ImageNotFound>}
