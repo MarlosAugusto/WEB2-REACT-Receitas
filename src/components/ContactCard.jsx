@@ -26,6 +26,7 @@ const Image = styled.img`
   width: 150px;
   height: auto;
   border-radius: 50%;
+  border: ${colors.greyDark} 1px solid;
   box-shadow: ${colors.grey} 1px 2px 0;
 `;
 

@@ -59,7 +59,7 @@ const Item = styled.p`
 export const Footer = () => (
   <TF>
     <Items>
-      <Item>Desenvolvido por Ian Carlos e Marlos Augusto</Item>
+      <Item>Desenvolvido por Marlos Augusto</Item>
       <Item bl>Bacharelado em Engenharia de Software - UTFPR</Item>
       <Item bl>Dois Vizinhos - PR - 2019</Item>
     </Items>

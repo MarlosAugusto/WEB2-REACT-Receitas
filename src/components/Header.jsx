@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import styled from "styled-components";
 
 import "../assets/fonts/Malvinas Sans/style.css";
@@ -187,9 +188,21 @@ export const Header = ({ logo, submenus }) => (
   <HD>
     <Logo src={logo} />
     <Menu>
-      {submenus.map(({ text, url }) => (
-        <MenuItem href={url}>{text}</MenuItem>
-      ))}
+      <MenuItem key="Home" href="/">
+        Home
+      </MenuItem>
+      <MenuItem key="Receitas Doces" href="/receitas-doces">
+        Receitas Doces
+      </MenuItem>
+      <MenuItem key="Receitas Salgadas" href="/receitas-salgadas">
+        Receitas Salgadas
+      </MenuItem>
+      <MenuItem key="Nova Receita" href="/nova-receita">
+        Nova Receita
+      </MenuItem>
+      <MenuItem key="Contato" href="/contato">
+        Contato
+      </MenuItem>
     </Menu>
     <MobileMenu submenus={submenus} />
   </HD>

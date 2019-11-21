@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const Txt = styled.span`
   color: ${props => props.color};
-  font-size: ${props => props.color ? `${props.color}px` : "20px"};
+  font-size: ${props => (props.color ? `${props.color}px` : "20px")};
   font-weight: bold;
 `;
 const Btn = styled.button`
@@ -13,14 +12,16 @@ const Btn = styled.button`
   color: ${props => props.color};
   border: ${props => props.color} solid 1px;
   width: 100%;
-  height: 40px;
+  height: 30px;
   text-align: center;
 `;
 
-export default function Button({ title, color, bg, fontSize, changeStep }) {
+export function Button({ title, color, bg, fontSize, clicked }) {
   return (
-    <Btn color={color} bg={bg} onClick={() => (changeStep && changeStep(title))}>
-      <Txt color={color} fontSize={fontSize}>{title}</Txt>
+    <Btn color={color} bg={bg} onClick={clicked}>
+      <Txt color={color} fontSize={fontSize}>
+        {title}
+      </Txt>
     </Btn>
   );
 }
