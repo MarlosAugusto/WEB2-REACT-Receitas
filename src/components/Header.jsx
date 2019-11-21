@@ -16,6 +16,7 @@ const HD = styled.div`
   flex-direction: row;
   background-color: ${colors.primaryDark};
   position: fixed;
+  z-index: 1;
 
   @media (max-width: 767px) {
     justify-content: space-between;
@@ -185,25 +186,27 @@ const MobileMenu = ({ submenus }) => {
 };
 
 export const Header = ({ logo, submenus }) => (
-  <HD>
-    <Logo src={logo} />
-    <Menu>
-      <MenuItem key="Home" href="/">
-        Home
-      </MenuItem>
-      <MenuItem key="Receitas Doces" href="/receitas-doces">
-        Receitas Doces
-      </MenuItem>
-      <MenuItem key="Receitas Salgadas" href="/receitas-salgadas">
-        Receitas Salgadas
-      </MenuItem>
-      <MenuItem key="Nova Receita" href="/nova-receita">
-        Nova Receita
-      </MenuItem>
-      <MenuItem key="Contato" href="/contato">
-        Contato
-      </MenuItem>
-    </Menu>
-    <MobileMenu submenus={submenus} />
-  </HD>
+  <>
+    <HD>
+      <Logo src={logo} />
+      <Menu>
+        <MenuItem key="Home" href="/">
+          Home
+        </MenuItem>
+        <MenuItem key="Receitas Doces" href="/receitas-doces">
+          Receitas Doces
+        </MenuItem>
+        <MenuItem key="Receitas Salgadas" href="/receitas-salgadas">
+          Receitas Salgadas
+        </MenuItem>
+        <MenuItem key="Nova Receita" href="/nova-receita">
+          Nova Receita
+        </MenuItem>
+        <MenuItem key="Contato" href="/contato">
+          Contato
+        </MenuItem>
+      </Menu>
+      <MobileMenu submenus={submenus} />
+    </HD>
+  </>
 );
