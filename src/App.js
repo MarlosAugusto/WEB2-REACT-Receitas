@@ -1,27 +1,33 @@
 import React from 'react';
-import Button from './components/Button';
-import Row from './components/Row';
-import Col from './components/Col';
-import { Home } from './screens/Home'
 import "./assets/fonts/Myriad Pro/style.css";
 import "./style.css";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <Row>
-//           <Col c={6} float>
-//             <Button title={"Learn React"} color={"#ff0"} bg={"#000000"} fontSize={10} changeStep={() => console.log("CLICOU!")} />
-//           </Col>
-//         </Row>
+import { Header } from "./components/Header"
+import { Container } from "./components/Container"
+import { Footer } from "./components/Footer"
+import { Home } from "./screens/Home";
+import { ReceitasDoces } from "./screens/ReceitasDoces";
+import { ReceitasSalgadas } from "./screens/ReceitasSalgadas";
+import { NovaReceita } from "./screens/NovaReceita";
+import { Contato } from "./screens/Contato";
 
-//       </header>
-//     </div>
-//   );
-// }
+import { routes } from "./defs/routes"
+import logo from "./assets/logo.png"
 
-export default Home;
+import { Route } from "react-router-dom";
+
+export default function App() {
+  return (
+    <div>
+      <Header logo={logo} submenus={routes} />
+      <Container>
+        <Route exact path="/" component={Home} />
+        <Route path="/receitas-doces" component={ReceitasDoces} />
+        <Route path="/receitas-salgadas" component={ReceitasSalgadas} />
+        <Route path="/nova-receita" component={NovaReceita} />
+        <Route path="/contato" component={Contato} />
+      </Container>
+      <Footer />
+    </div>
+  );
+}
