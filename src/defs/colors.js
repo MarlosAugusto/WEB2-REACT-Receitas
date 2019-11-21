@@ -5,6 +5,8 @@ export const colors = {
   secundary: "#eb703d",
   secundary50: "#eb703d80",
   secundaryDark: "#61270f",
+  grey: "#7a7a7a",
+  greyDark: "#333131"
 }
 
 export default colors
