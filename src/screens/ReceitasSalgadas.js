@@ -57,7 +57,7 @@ export function ReceitasSalgadas() {
                 <FormItemCol wd={3} top>
                   <RecipeButton onClick={() => history.push(`/receita/Receita-Salgada/${uid}`)}>
                     <ImageContainer>
-                      <Image src={images[index]} />
+                      <Image src={images[index] ? images[index] : null} />
                       {!images[index] && <ImageNotFound>Imagem não encontrada</ImageNotFound>}
                     </ImageContainer>
                   </RecipeButton>

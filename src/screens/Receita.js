@@ -48,7 +48,7 @@ export function Receita() {
               <FormItemRow>
                 <FormItemCol wd={3} top>
                   <ImageContainer>
-                    <Image src={image} />
+                    <Image src={image ? image : null} />
                     {!image && <ImageNotFound>Imagem não encontrada</ImageNotFound>}
                   </ImageContainer>
                 </FormItemCol>
